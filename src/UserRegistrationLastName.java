@@ -2,21 +2,20 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 @FunctionalInterface
-interface FirstName {
-    void firstNameValidate();
+interface LastName {
+    void LastNameValidate();
 }
 
-public class UserRegistrationFirstName {
+public class UserRegistrationLastName {
     public static void main(String[] args) {
-        //Lambda -> operator uses for first name
-        FirstName fName = () -> {
+        //Lambda ->  first name
+        LastName LName = () -> {
             Scanner sc = new Scanner(System.in);
-            //Regex pattern for FirstName
+            //Regex  for LastName
             String regex = "^[A-Z]{1}[a-z]{3,20}$";
-            //user input
-            System.out.println("Enter your name");
+
+            System.out.println("Enter your  Last name");
             String name = sc.next();
 
             Pattern pattern = Pattern.compile(regex);
@@ -27,7 +26,7 @@ public class UserRegistrationFirstName {
                 System.out.println("Entered name id is not valid");
             }
         };
-        fName.firstNameValidate();
+        LName.LastNameValidate();
 
     }
 }
